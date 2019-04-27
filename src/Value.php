@@ -21,7 +21,7 @@ interface Value
      *     true or consistently return false.
      *   - For any reference value x, x.equals(null) should return false.
      *
-     * Note that it is generally necessary to override the hashCode method whenever this method is overridden, so as to
+     * Note that it is generally necessary to change the hashCode method whenever this method is changed, so as to
      * maintain the general contract for the hashCode() method, which states that equal objects must have equal hash
      * codes.
      */
