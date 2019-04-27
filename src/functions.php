@@ -8,6 +8,10 @@ namespace Value
     use function Value\IntMath\add;
 
     /**
+     * Indicates whether two values are equal to each other.
+     *
+     * This function follows the same rules as @see Value::equals()
+     *
      * @return bool
      */
     function equal($value1, $value2)
@@ -48,6 +52,11 @@ namespace Value
     }
 
     /**
+     * Returns a hash code for the value. This method is supported for the benefit of hash tables often used in data
+     * structures.
+     *
+     * This function follows the same rules as @see Value::hashCode()
+     *
      * @return int
      */
     function hash($value)
@@ -77,6 +86,18 @@ namespace Value
     }
 
     /**
+     * Generates a hash code for a sequence of input values.
+     *
+     * This method is useful for implementing @see Value::hashCode() on objects containing multiple fields. For example,
+     * if an object that has three fields, x, y, and z, one could write:
+     *
+     *   function hashCode(): int {
+     *     return hashValues([x, y, z]);
+     *   }
+     *
+     * Warning: When a single value is supplied, the returned hash code does not equal the hash code of that value. This
+     * hash code can be computed by calling hash(value).
+     *
      * @param iterable $values
      * @return int
      */
@@ -94,6 +115,8 @@ namespace Value
     }
 
     /**
+     * Generates a hash code for an associative array of input values, including the keys in the hash code.
+     *
      * @param iterable $keysAndValues
      * @return int
      */
