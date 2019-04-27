@@ -1,0 +1,13 @@
+{
+    "name": "joshdifabio/value",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Value\\": "src"
+        },
+        "files": [ "src/functions.php" ]
+    }
+}
